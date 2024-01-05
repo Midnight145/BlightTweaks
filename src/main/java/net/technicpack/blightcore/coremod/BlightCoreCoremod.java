@@ -33,7 +33,6 @@ public class BlightCoreCoremod implements IFMLLoadingPlugin {
 		editors.clear();
 		editors.add(new BlockOceanNodesEditor());
 		editors.add(new BlockTaintedSandEditor(isObfuscated));
-		editors.add(new DeathsReduceRepEditor());
 		editors.add(new BlockTaintedBotaniaFlowerEditor());
 		editors.add(new AWDisableChiselCompatEditor());
 	}
