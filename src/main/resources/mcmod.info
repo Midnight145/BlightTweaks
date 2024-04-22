@@ -1,10 +1,10 @@
 [
 {
-  "modid": "blightcore",
-  "name": "Blight Core",
+  "modid": "{modId}",
+  "name": "{modName}",
   "description": "It's a coremod for blightfall.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "${modVersion}",
+  "mcversion": "${minecraftVersion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["CanVox"],

@@ -1,10 +1,22 @@
-package net.technicpack.blightcore.coremod.asm;
+package co.nidmight.blightcore.coremod.asm;
 
-import static org.objectweb.asm.Opcodes.*;
+import static org.objectweb.asm.Opcodes.ALOAD;
+import static org.objectweb.asm.Opcodes.ASTORE;
+import static org.objectweb.asm.Opcodes.ICONST_0;
+import static org.objectweb.asm.Opcodes.IFEQ;
+import static org.objectweb.asm.Opcodes.INSTANCEOF;
+import static org.objectweb.asm.Opcodes.IRETURN;
 
-import org.objectweb.asm.tree.*;
+import org.objectweb.asm.tree.AbstractInsnNode;
+import org.objectweb.asm.tree.InsnNode;
+import org.objectweb.asm.tree.JumpInsnNode;
+import org.objectweb.asm.tree.LabelNode;
+import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.TypeInsnNode;
+import org.objectweb.asm.tree.VarInsnNode;
 
 public class BlockTaintedBotaniaFlowerEditor implements IAsmEditor {
+
     @Override
     public void edit(MethodNode method) {
         AbstractInsnNode beforeNode = null;
@@ -17,11 +29,12 @@ public class BlockTaintedBotaniaFlowerEditor implements IAsmEditor {
             }
         }
 
-        if (beforeNode == null)
-            throw new RuntimeException("BlightCore failed to find an injection point to block the tainting of botania flowers.");
+        if (beforeNode == null) throw new RuntimeException(
+            "BlightCore failed to find an injection point to block the tainting of botania flowers.");
 
         method.instructions.insertBefore(beforeNode, new VarInsnNode(ALOAD, 4));
-        method.instructions.insertBefore(beforeNode, new TypeInsnNode(INSTANCEOF, "vazkii/botania/common/block/BlockSpecialFlower"));
+        method.instructions
+            .insertBefore(beforeNode, new TypeInsnNode(INSTANCEOF, "vazkii/botania/common/block/BlockSpecialFlower"));
 
         LabelNode outLabel = new LabelNode();
         method.instructions.insertBefore(beforeNode, new JumpInsnNode(IFEQ, outLabel));
@@ -30,7 +43,8 @@ public class BlockTaintedBotaniaFlowerEditor implements IAsmEditor {
         method.instructions.insertBefore(beforeNode, outLabel);
 
         method.instructions.insertBefore(beforeNode, new VarInsnNode(ALOAD, 4));
-        method.instructions.insertBefore(beforeNode, new TypeInsnNode(INSTANCEOF, "vazkii/botania/common/block/BlockModFlower"));
+        method.instructions
+            .insertBefore(beforeNode, new TypeInsnNode(INSTANCEOF, "vazkii/botania/common/block/BlockModFlower"));
 
         outLabel = new LabelNode();
         method.instructions.insertBefore(beforeNode, new JumpInsnNode(IFEQ, outLabel));

@@ -1,31 +1,26 @@
-package net.technicpack.blightcore.coremod;
+package co.nidmight.blightcore.coremod;
+
+import static org.objectweb.asm.Opcodes.ASM5;
 
 import net.minecraft.launchwrapper.IClassTransformer;
-import net.technicpack.blightcore.coremod.asm.BlockOceanNodesEditor;
-import net.technicpack.blightcore.coremod.asm.BlockTaintedSandEditor;
-import net.technicpack.blightcore.coremod.asm.IAsmEditor;
+
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.tree.*;
+import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.MethodNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.objectweb.asm.Opcodes.*;
+import co.nidmight.blightcore.coremod.asm.IAsmEditor;
 
 public class BlightCoreClassTransformer implements IClassTransformer {
 
-    public BlightCoreClassTransformer() {
-    }
+    public BlightCoreClassTransformer() {}
 
     @Override
     public byte[] transform(String s, String s1, byte[] bytes) {
-        if (bytes == null)
-            return null;
+        if (bytes == null) return null;
 
         for (IAsmEditor editor : BlightCoreCoremod.editors) {
-            if (s1.equals(editor.getClassName()))
-                bytes = updateMethod(bytes, editor);
+            if (s1.equals(editor.getClassName())) bytes = updateMethod(bytes, editor);
         }
 
         return bytes;
@@ -44,8 +39,10 @@ public class BlightCoreClassTransformer implements IClassTransformer {
             }
         }
 
-        if (!foundMethod)
-            throw new RuntimeException("BlightCore failed to find a method named "+editor.getMethodName()+" in class "+editor.getClassName());
+        if (!foundMethod) throw new RuntimeException(
+            "BlightCore failed to find a method named " + editor.getMethodName()
+                + " in class "
+                + editor.getClassName());
 
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         node.accept(writer);

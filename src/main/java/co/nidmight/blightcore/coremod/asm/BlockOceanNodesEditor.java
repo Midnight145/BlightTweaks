@@ -1,10 +1,21 @@
-package net.technicpack.blightcore.coremod.asm;
+package co.nidmight.blightcore.coremod.asm;
 
-import org.objectweb.asm.tree.*;
+import static org.objectweb.asm.Opcodes.ALOAD;
+import static org.objectweb.asm.Opcodes.IFEQ;
+import static org.objectweb.asm.Opcodes.ILOAD;
+import static org.objectweb.asm.Opcodes.INVOKESTATIC;
+import static org.objectweb.asm.Opcodes.RETURN;
 
-import static org.objectweb.asm.Opcodes.*;
+import org.objectweb.asm.tree.AbstractInsnNode;
+import org.objectweb.asm.tree.InsnNode;
+import org.objectweb.asm.tree.JumpInsnNode;
+import org.objectweb.asm.tree.LabelNode;
+import org.objectweb.asm.tree.MethodInsnNode;
+import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.VarInsnNode;
 
 public class BlockOceanNodesEditor implements IAsmEditor {
+
     @Override
     public void edit(MethodNode method) {
         AbstractInsnNode firstInstruction = method.instructions.getFirst();
@@ -12,7 +23,12 @@ public class BlockOceanNodesEditor implements IAsmEditor {
         method.instructions.insertBefore(firstInstruction, new VarInsnNode(ALOAD, 0));
         method.instructions.insertBefore(firstInstruction, new VarInsnNode(ILOAD, 1));
         method.instructions.insertBefore(firstInstruction, new VarInsnNode(ILOAD, 3));
-        MethodInsnNode methodInstruction = new MethodInsnNode(INVOKESTATIC, "net/technicpack/blightcore/support/ThaumcraftAsmSupport", "checkNodeSpawnBiome", "(Lnet/minecraft/world/World;II)Z", false);
+        MethodInsnNode methodInstruction = new MethodInsnNode(
+            INVOKESTATIC,
+            "co/nidmight/blightcore/support/ThaumcraftAsmSupport",
+            "checkNodeSpawnBiome",
+            "(Lnet/minecraft/world/World;II)Z",
+            false);
         method.instructions.insertBefore(firstInstruction, methodInstruction);
 
         LabelNode returnToMethod = new LabelNode();
