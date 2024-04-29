@@ -8,5 +8,5 @@ public class BTStrings {
 
     public static final String boundRingName = "boundRing";
     public static final String researchNoteName = "researchNote";
-    public static String oreKillerName = "worldOreKiller";
+    public static final String oreKillerName = "worldOreKiller";
 }
