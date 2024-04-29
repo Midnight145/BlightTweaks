@@ -1,4 +1,4 @@
-package co.nidmight.blightcore.coremod;
+package co.nidmight.blighttweaks.coremod;
 
 import static org.objectweb.asm.Opcodes.ASM5;
 
@@ -9,7 +9,7 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 
-import co.nidmight.blightcore.coremod.asm.IAsmEditor;
+import co.nidmight.blighttweaks.coremod.asm.IAsmEditor;
 
 public class BlightCoreClassTransformer implements IClassTransformer {
 

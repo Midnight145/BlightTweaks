@@ -1,4 +1,4 @@
-package co.nidmight.blightcore.support;
+package co.nidmight.blighttweaks.coremod.support;
 
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;

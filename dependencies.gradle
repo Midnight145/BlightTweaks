@@ -34,5 +34,14 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
+    api("com.github.GTNewHorizons:AppleCore:3.3.0:dev")
+    api(rfg.deobf("curse.maven:tmechworks-78057:2272157"))
+    api("com.github.GTNewHorizons:TinkersConstruct:1.11.12-GTNH:dev")
+    api(rfg.deobf("curse.maven:bibliocraft-228027:2423369"))
+    api(rfg.deobf("curse.maven:customnpcs-221826:2495406"))
+    api("curse.maven:eu2-225561:2264384")
+    api("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
+    api("com.github.GTNewHorizons:BloodMagic:1.5.1:dev")
+    api(rfg.deobf("curse.maven:ubc-72744:2304497"))
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.5.4-GTNH:dev")
 }

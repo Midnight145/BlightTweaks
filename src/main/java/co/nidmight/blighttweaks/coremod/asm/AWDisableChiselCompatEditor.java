@@ -1,4 +1,4 @@
-package co.nidmight.blightcore.coremod.asm;
+package co.nidmight.blighttweaks.coremod.asm;
 
 import static org.objectweb.asm.Opcodes.ICONST_0;
 import static org.objectweb.asm.Opcodes.IRETURN;

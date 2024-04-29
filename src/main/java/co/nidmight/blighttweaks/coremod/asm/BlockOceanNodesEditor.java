@@ -1,4 +1,4 @@
-package co.nidmight.blightcore.coremod.asm;
+package co.nidmight.blighttweaks.coremod.asm;
 
 import static org.objectweb.asm.Opcodes.ALOAD;
 import static org.objectweb.asm.Opcodes.IFEQ;
@@ -25,7 +25,7 @@ public class BlockOceanNodesEditor implements IAsmEditor {
         method.instructions.insertBefore(firstInstruction, new VarInsnNode(ILOAD, 3));
         MethodInsnNode methodInstruction = new MethodInsnNode(
             INVOKESTATIC,
-            "co/nidmight/blightcore/support/ThaumcraftAsmSupport",
+            "co/nidmight/blighttweaks/coremod/support/ThaumcraftAsmSupport",
             "checkNodeSpawnBiome",
             "(Lnet/minecraft/world/World;II)Z",
             false);
