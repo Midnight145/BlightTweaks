@@ -13,6 +13,7 @@ import co.nidmight.blighttweaks.coremod.asm.BlockOceanNodesEditor;
 import co.nidmight.blighttweaks.coremod.asm.BlockTaintedBotaniaFlowerEditor;
 import co.nidmight.blighttweaks.coremod.asm.BlockTaintedSandEditor;
 import co.nidmight.blighttweaks.coremod.asm.IAsmEditor;
+import co.nidmight.blighttweaks.coremod.asm.ItemStackManaPetalEditor;
 import cpw.mods.fml.common.DummyModContainer;
 import cpw.mods.fml.common.LoadController;
 import cpw.mods.fml.common.ModMetadata;
@@ -63,10 +64,12 @@ public class BlightCoreCoremod extends DummyModContainer implements IFMLLoadingP
         editors.add(new BlockTaintedSandEditor(isObfuscated));
         editors.add(new BlockTaintedBotaniaFlowerEditor());
         editors.add(new AWDisableChiselCompatEditor());
+        editors.add(new ItemStackManaPetalEditor(isObfuscated));
     }
 
     @Override
     public String getAccessTransformerClass() {
-        return "co.nidmight.blighttweaks.coremod.BlightCoreAccessTransformer";
+        return null;
     }
+
 }
