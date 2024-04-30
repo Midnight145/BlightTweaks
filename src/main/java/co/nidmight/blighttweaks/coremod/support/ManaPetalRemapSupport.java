@@ -9,6 +9,8 @@ import vazkii.botania.common.item.material.ItemManaPetal;
 @SuppressWarnings("unused")
 public class ManaPetalRemapSupport {
 
+    // credit to https://github.com/GTNewHorizons/Postea/blob/master/src/main/java/com/gtnewhorizons/postea/utility/ItemFixerUtility.java#L14
+
     public static void remapManaPetal(NBTTagCompound tag) {
         if (tag.hasNoTags()) {
             return;
