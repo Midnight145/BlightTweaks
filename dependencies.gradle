@@ -43,5 +43,6 @@ dependencies {
     api("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
     api("com.github.GTNewHorizons:BloodMagic:1.5.1:dev")
     api(rfg.deobf("curse.maven:ubc-72744:2304497"))
+    api(rfg.deobf("curse.maven:botania-225643:2249359"))
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.5.4-GTNH:dev")
 }
