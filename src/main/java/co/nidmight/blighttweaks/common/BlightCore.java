@@ -1,5 +1,8 @@
 package co.nidmight.blighttweaks.common;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ChestGenHooks;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,6 +14,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLMissingMappingsEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import noppes.npcs.CustomItems;
 import noppes.npcs.blocks.BlockBlood;
 
@@ -29,6 +33,12 @@ public class BlightCore {
         new FoodHandler();
         new InteractHandler();
         new ChunkHandler();
+        ItemStack broadsword = GameRegistry.findItemStack("TConstruct", "broadsword", 1);
+        if (broadsword != null) {
+            broadsword.setItemDamage(-1);
+            ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST)
+                .removeItem(broadsword);
+        }
     }
 
     @Mod.EventHandler()
