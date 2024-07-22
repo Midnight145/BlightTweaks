@@ -1,7 +1,7 @@
 [
 {
-  "modid": "{modId}",
-  "name": "{modName}",
+  "modid": "${modId}",
+  "name": "${modName}",
   "description": "It's a coremod for blightfall.",
   "version": "${modVersion}",
   "mcversion": "${minecraftVersion}",
