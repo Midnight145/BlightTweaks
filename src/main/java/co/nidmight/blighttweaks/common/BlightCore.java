@@ -52,6 +52,10 @@ public class BlightCore {
     public void missingMappings(FMLMissingMappingsEvent event) throws Exception {
         for (FMLMissingMappingsEvent.MissingMapping mapping : event.getAll()) {
             logger.info("Found missing mapping: {}", mapping.name);
+            if (mapping.name.equals("Baubles:Ring")) {
+                mapping.ignore();
+                return;
+            }
             if (!mapping.name.startsWith("blightbuster")) {
                 continue;
             }

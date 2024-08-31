@@ -34,6 +34,7 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
+    api("com.github.GTNewHorizons:Baubles-Expanded:2.0.1:dev@jar")
     api("com.github.GTNewHorizons:AppleCore:3.3.0:dev")
     api(rfg.deobf("curse.maven:tmechworks-78057:2272157"))
     api("com.github.GTNewHorizons:TinkersConstruct:1.11.12-GTNH:dev")

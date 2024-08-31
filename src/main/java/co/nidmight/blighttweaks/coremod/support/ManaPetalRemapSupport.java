@@ -19,6 +19,9 @@ public class ManaPetalRemapSupport {
         if (tag.hasKey("id")) {
             short id = tag.getShort("id");
             Item item = Item.getItemById(id);
+            if (item == null) {
+                return;
+            }
             if (item.getClass() == ItemManaPetal.class) {
                 tag.setShort("id", (short) Item.getIdFromItem(ModItems.petal));
             }
