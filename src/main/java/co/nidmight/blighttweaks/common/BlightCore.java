@@ -6,6 +6,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import co.nidmight.blighttweaks.common.compat.ThaumcraftRecipes;
 import co.nidmight.blighttweaks.common.handlers.ChunkHandler;
 import co.nidmight.blighttweaks.common.handlers.FoodHandler;
 import co.nidmight.blighttweaks.common.handlers.InteractHandler;
@@ -33,6 +34,14 @@ public class BlightCore {
         new FoodHandler();
         new InteractHandler();
         new ChunkHandler();
+    }
+
+    @Mod.EventHandler()
+    public void postInit(FMLPostInitializationEvent event) {
+        if (CustomItems.blood instanceof BlockBlood) { // take account for config being disabled
+            CustomItems.blood.setHardness(.5f);
+        }
+        ThaumcraftRecipes.init();
         ItemStack broadsword = GameRegistry.findItemStack("TConstruct", "broadsword", 1);
         if (broadsword != null) {
             broadsword.setItemDamage(-1);
@@ -42,13 +51,6 @@ public class BlightCore {
     }
 
     @Mod.EventHandler()
-    public void postInit(FMLPostInitializationEvent event) {
-        if (CustomItems.blood instanceof BlockBlood) { // take account for config being disabled
-            CustomItems.blood.setHardness(.5f);
-        }
-    }
-
-    @Mod.EventHandler
     public void missingMappings(FMLMissingMappingsEvent event) throws Exception {
         for (FMLMissingMappingsEvent.MissingMapping mapping : event.getAll()) {
             logger.info("Found missing mapping: {}", mapping.name);

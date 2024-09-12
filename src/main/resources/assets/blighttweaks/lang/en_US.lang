@@ -6,3 +6,8 @@ item.blighttweaks_boundRing.1.name=Feathery Wings
 item.blighttweaks_boundRing.2.name=Fairy Wings
 item.blighttweaks_boundRing.3.name=Dragon Wings
 item.blighttweaks_boundRing.4.name=Golden Wings
+
+tc.research_name.PLANTCONJURATION=Plant Conjuration
+tc.research_text.PLANTCONJURATION=For when you need that extra blaze powder
+
+tc.research_page.PLANTCONJURATION.0=By combining various alchemical ingredients with magic and life, you can create different types of plants, even those that may have gone extinct.<LINE>
