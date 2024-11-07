@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import co.nidmight.blighttweaks.common.compat.ThaumcraftRecipes;
+import co.nidmight.blighttweaks.common.compat.UBCIntegration;
 import co.nidmight.blighttweaks.common.handlers.ChunkHandler;
 import co.nidmight.blighttweaks.common.handlers.FoodHandler;
 import co.nidmight.blighttweaks.common.handlers.InteractHandler;
@@ -25,8 +26,10 @@ public class BlightCore {
     public static Logger logger = LogManager.getLogger(BTStrings.MOD_ID);
 
     @Mod.EventHandler()
-    public void preInit(FMLInitializationEvent event) {
+    public void preInit() {
         Items.init();
+        // Blocks.quartz_ore.setHarvestLevel("pickaxe", 2);
+        UBCIntegration.register();
     }
 
     @Mod.EventHandler()
@@ -54,25 +57,25 @@ public class BlightCore {
     public void missingMappings(FMLMissingMappingsEvent event) throws Exception {
         for (FMLMissingMappingsEvent.MissingMapping mapping : event.getAll()) {
             logger.info("Found missing mapping: {}", mapping.name);
-            if (mapping.name.equals("Baubles:Ring")) {
+            if (mapping.name.equals("Baubles:Ring") || mapping.name.equals("AWWayofTime:itemBloodMagicBook")) {
+                logger.info("Ignoring mapping {}", mapping.name);
                 mapping.ignore();
-                return;
             }
             if (!mapping.name.startsWith("blightbuster")) {
                 continue;
             }
             switch (mapping.name) {
                 case "blightbuster:boundRing":
-                    logger.info("Remapping blightbuster:boundRing to " + Items.boundRing.getUnlocalizedName());
+                    logger.info("Remapping blightbuster:boundRing to {}", Items.boundRing.getUnlocalizedName());
                     mapping.remap(Items.boundRing);
                     break;
                 case "blightbuster:researchnote":
-                    logger.info("Remapping blightbuster:researchnote to " + Items.alienTome.getUnlocalizedName());
+                    logger.info("Remapping blightbuster:researchnote to {}", Items.alienTome.getUnlocalizedName());
                     mapping.remap(Items.alienTome);
                     break;
                 case "blightbuster:worldOreKiller":
                     logger
-                        .info("Remapping blightbuster:worldOreKiller to " + Items.worldOreKiller.getUnlocalizedName());
+                        .info("Remapping blightbuster:worldOreKiller to {}", Items.worldOreKiller.getUnlocalizedName());
                     mapping.remap(Items.worldOreKiller);
                     break;
                 default:

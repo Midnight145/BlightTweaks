@@ -27,7 +27,7 @@ public class ThaumcraftRecipes {
             -5,
             0,
             2,
-            new ItemStack(ConfigBlocks.blockCustomPlant, 1, 5)); // Change to match your block
+            new ItemStack(ConfigBlocks.blockCustomPlant, 1, 5));
 
         // Add Crucible recipes
         CrucibleRecipe redConjurationRecipe = ThaumcraftApi.addCrucibleRecipe(
