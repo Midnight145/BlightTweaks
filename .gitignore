@@ -1,6 +1,5 @@
 node_info.json
 conf/
-libs*
 build
 .gradle
 eclipse
@@ -12,7 +11,6 @@ bin
 *.ipr
 *.iws
 out/
-libs/
 deps/
 target/
 .idea/
