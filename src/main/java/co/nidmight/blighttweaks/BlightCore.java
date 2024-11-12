@@ -1,4 +1,4 @@
-package co.nidmight.blighttweaks.common;
+package co.nidmight.blighttweaks;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ChestGenHooks;
@@ -16,6 +16,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLMissingMappingsEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import noppes.npcs.CustomItems;
 import noppes.npcs.blocks.BlockBlood;
@@ -26,7 +27,7 @@ public class BlightCore {
     public static Logger logger = LogManager.getLogger(BTStrings.MOD_ID);
 
     @Mod.EventHandler()
-    public void preInit() {
+    public void preInit(FMLPreInitializationEvent event) {
         Items.init();
         // Blocks.quartz_ore.setHarvestLevel("pickaxe", 2);
         UBCIntegration.register();

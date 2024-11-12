@@ -18,7 +18,7 @@ import com.rwtema.extrautils.network.packets.PacketAngelRingNotifier;
 import WayofTime.alchemicalWizardry.AlchemicalWizardry;
 import WayofTime.alchemicalWizardry.api.items.interfaces.ArmourUpgrade;
 import WayofTime.alchemicalWizardry.common.items.armour.BoundArmour;
-import co.nidmight.blighttweaks.common.BTStrings;
+import co.nidmight.blighttweaks.BTStrings;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 

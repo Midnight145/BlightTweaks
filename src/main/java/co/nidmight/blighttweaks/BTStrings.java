@@ -1,4 +1,4 @@
-package co.nidmight.blighttweaks.common;
+package co.nidmight.blighttweaks;
 
 public class BTStrings {
 

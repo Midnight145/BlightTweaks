@@ -7,7 +7,7 @@ import net.minecraft.init.Blocks;
 
 import com.rwtema.extrautils.core.Tuple;
 
-import co.nidmight.blighttweaks.common.BlightCore;
+import co.nidmight.blighttweaks.BlightCore;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 
 public class UBCIntegration {

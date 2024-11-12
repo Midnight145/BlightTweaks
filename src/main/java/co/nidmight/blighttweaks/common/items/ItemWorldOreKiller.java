@@ -13,7 +13,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.layer.IntCache;
 
-import co.nidmight.blighttweaks.common.BTStrings;
+import co.nidmight.blighttweaks.BTStrings;
 import cpw.mods.fml.common.registry.GameRegistry;
 import exterminatorJeff.undergroundBiomes.api.UBAPIHook;
 import exterminatorJeff.undergroundBiomes.api.UBStrataColumn;

@@ -7,7 +7,7 @@ import java.util.Map;
 import com.google.common.collect.ImmutableList;
 import com.google.common.eventbus.EventBus;
 
-import co.nidmight.blighttweaks.common.BTStrings;
+import co.nidmight.blighttweaks.BTStrings;
 import co.nidmight.blighttweaks.coremod.asm.AWDisableChiselCompatEditor;
 import co.nidmight.blighttweaks.coremod.asm.BlockOceanNodesEditor;
 import co.nidmight.blighttweaks.coremod.asm.BlockTaintedBotaniaFlowerEditor;

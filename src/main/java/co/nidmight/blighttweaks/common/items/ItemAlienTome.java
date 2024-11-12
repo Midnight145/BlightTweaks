@@ -11,7 +11,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-import co.nidmight.blighttweaks.common.BTStrings;
+import co.nidmight.blighttweaks.BTStrings;
 import cpw.mods.fml.common.registry.GameRegistry;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.common.Thaumcraft;
