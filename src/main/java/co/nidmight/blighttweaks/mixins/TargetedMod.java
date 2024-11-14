@@ -9,7 +9,8 @@ import cpw.mods.fml.common.Mod;
 public enum TargetedMod {
 
     VANILLA("Minecraft", null),
-    CHISEL("Chisel", "chisel");
+    CHISEL("Chisel", "chisel"),
+    BLOODMAGIC("AlchemicalWizardry", "AWWayofTime"),;
 
     /** The "name" in the {@link Mod @Mod} annotation */
     public final String modName;

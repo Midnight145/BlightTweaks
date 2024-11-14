@@ -11,6 +11,7 @@ import co.nidmight.blighttweaks.common.compat.UBCIntegration;
 import co.nidmight.blighttweaks.common.handlers.ChunkHandler;
 import co.nidmight.blighttweaks.common.handlers.FoodHandler;
 import co.nidmight.blighttweaks.common.handlers.InteractHandler;
+import co.nidmight.blighttweaks.common.handlers.KeybindHandler;
 import co.nidmight.blighttweaks.common.items.Items;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -38,6 +39,7 @@ public class BlightCore {
         new FoodHandler();
         new InteractHandler();
         new ChunkHandler();
+        new KeybindHandler();
     }
 
     @Mod.EventHandler()

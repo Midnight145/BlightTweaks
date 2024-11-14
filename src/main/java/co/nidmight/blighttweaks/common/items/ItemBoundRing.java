@@ -1,11 +1,8 @@
 package co.nidmight.blighttweaks.common.items;
 
-import java.util.HashSet;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,14 +14,13 @@ import com.rwtema.extrautils.network.packets.PacketAngelRingNotifier;
 
 import WayofTime.alchemicalWizardry.AlchemicalWizardry;
 import WayofTime.alchemicalWizardry.api.items.interfaces.ArmourUpgrade;
-import WayofTime.alchemicalWizardry.common.items.armour.BoundArmour;
 import co.nidmight.blighttweaks.BTStrings;
+import co.nidmight.blighttweaks.common.interfaces.IFlyingUpgrade;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ItemBoundRing extends ItemAngelRing implements ArmourUpgrade {
+public class ItemBoundRing extends ItemAngelRing implements ArmourUpgrade, IFlyingUpgrade {
 
-    public static HashSet<String> flyingPlayers = new HashSet<String>();
     public int wingType = -1;
     boolean sentPacket = false;
 
@@ -41,6 +37,7 @@ public class ItemBoundRing extends ItemAngelRing implements ArmourUpgrade {
         if (!world.isRemote) {
             if (!this.sentPacket) {
                 this.sendPacket(player.getDisplayName(), this.wingType);
+                this.sentPacket = true;
             }
         }
         if (world.isRemote) {
@@ -76,53 +73,24 @@ public class ItemBoundRing extends ItemAngelRing implements ArmourUpgrade {
 
     @SubscribeEvent
     public void canFly(LivingUpdateEvent event) {
-        if (event.entity.worldObj.isRemote) {
-            return;
-        }
-        if (!(event.entityLiving instanceof EntityPlayerMP)) {
-            return;
-        }
-        EntityPlayerMP player = (EntityPlayerMP) event.entityLiving;
-        if (this.shouldFly(player)) {
-            flyingPlayers.add(player.getDisplayName());
-            if (!this.sentPacket) {
-                this.sendPacket(player.getDisplayName(), this.wingType);
-            }
-
-            player.capabilities.allowFlying = true;
-            player.sendPlayerAbilities();
-        } else {
-            if (flyingPlayers.contains(player.getDisplayName())) {
-                flyingPlayers.remove(player.getDisplayName());
-                if (!this.sentPacket) {
-                    this.sendPacket(player.getDisplayName(), 0);
-                }
-                if (!player.capabilities.isCreativeMode) {
-                    player.capabilities.allowFlying = false;
-                    player.capabilities.isFlying = false;
-                    player.sendPlayerAbilities();
-                }
-            }
+        if (event.entityLiving instanceof EntityPlayerMP player) {
+            managePacket(player);
+            IFlyingUpgrade.super.canFly(event);
         }
     }
 
-    public boolean shouldFly(EntityPlayer player) {
-        for (int i = 0; i < 4; i++) {
-            ItemStack stack = player.getCurrentArmor(i);
-            if (stack == null) {
-                continue;
+    private void managePacket(EntityPlayerMP player) {
+        if (this.shouldFly(player)) {
+            if (!this.sentPacket) {
+                this.sendPacket(player.getDisplayName(), this.wingType);
+                this.sentPacket = true;
             }
-            Item item = stack.getItem();
-            if (item != null && item instanceof BoundArmour) {
-                BoundArmour armor = (BoundArmour) item;
-                for (ItemStack is : armor.getInternalInventory(stack)) {
-                    if (is != null && is.getItem() instanceof ItemBoundRing) {
-                        return true;
-                    }
-                }
+        } else {
+            if (flyingPlayers.contains(player.getDisplayName())) {
+                this.sendPacket(player.getDisplayName(), 0);
+                this.sentPacket = false;
             }
         }
-        return false;
     }
 
     private void sendPacket(String playerName, int type) {

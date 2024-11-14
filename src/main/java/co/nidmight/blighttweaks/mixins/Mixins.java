@@ -19,6 +19,11 @@ public enum Mixins {
         .setSide(Side.CLIENT)
         .setPhase(Phase.LATE)
         .addMixinClasses("MixinBlockMarbleBookshelf")
+        .setApplyIf(() -> true)),
+    AIR_SIGIL_BUFF(new Builder("air sigil buff").addTargetedMod(TargetedMod.BLOODMAGIC)
+        .setSide(Side.BOTH)
+        .setPhase(Phase.LATE)
+        .addMixinClasses("MixinSigilAir")
         .setApplyIf(() -> true));
 
     private final List<String> mixinClasses;
