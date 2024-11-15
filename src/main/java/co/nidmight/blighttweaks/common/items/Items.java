@@ -7,10 +7,12 @@ public class Items {
     public static Item boundRing;
     public static Item alienTome;
     public static Item worldOreKiller;
+    public static Item soulSigil;
 
     public static void init() {
         boundRing = new ItemBoundRing();
         alienTome = new ItemAlienTome();
         worldOreKiller = new ItemWorldOreKiller();
+        soulSigil = new ItemSoulSigil();
     }
 }

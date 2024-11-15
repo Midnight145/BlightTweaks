@@ -6,6 +6,9 @@ item.blighttweaks_boundRing.1.name=Feathery Wings
 item.blighttweaks_boundRing.2.name=Fairy Wings
 item.blighttweaks_boundRing.3.name=Dragon Wings
 item.blighttweaks_boundRing.4.name=Golden Wings
+item.blighttweaks_soulSigil.name=Sigil of the Hardened Soul
+
+tooltip.soulsigil.desc=For when 90% isn't enough.
 
 tc.research_name.PLANTCONJURATION=Plant Conjuration
 tc.research_text.PLANTCONJURATION=For when you need that extra blaze powder
