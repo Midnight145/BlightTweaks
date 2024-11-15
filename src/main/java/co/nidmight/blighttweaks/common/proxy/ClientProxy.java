@@ -1,4 +1,14 @@
 package co.nidmight.blighttweaks.common.proxy;
 
-public class ClientProxy {
+import co.nidmight.blighttweaks.common.handlers.KeybindHandler;
+import cpw.mods.fml.common.FMLCommonHandler;
+
+public class ClientProxy extends CommonProxy {
+
+    public void init() {
+        FMLCommonHandler.instance()
+            .bus()
+            .register(new KeybindHandler());
+    }
+
 }

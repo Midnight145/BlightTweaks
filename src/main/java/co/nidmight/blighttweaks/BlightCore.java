@@ -7,13 +7,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import co.nidmight.blighttweaks.common.compat.ThaumcraftRecipes;
-import co.nidmight.blighttweaks.common.compat.UBCIntegration;
-import co.nidmight.blighttweaks.common.handlers.ChunkHandler;
-import co.nidmight.blighttweaks.common.handlers.FoodHandler;
-import co.nidmight.blighttweaks.common.handlers.InteractHandler;
-import co.nidmight.blighttweaks.common.handlers.KeybindHandler;
 import co.nidmight.blighttweaks.common.items.Items;
+import co.nidmight.blighttweaks.common.network.BlightCoreNetwork;
+import co.nidmight.blighttweaks.common.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLMissingMappingsEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -27,19 +25,21 @@ public class BlightCore {
 
     public static Logger logger = LogManager.getLogger(BTStrings.MOD_ID);
 
+    @SidedProxy(
+        clientSide = "co.nidmight.blighttweaks.common.proxy.ClientProxy",
+        serverSide = "co.nidmight.blighttweaks.common.proxy.CommonProxy")
+    public static CommonProxy proxy;
+
     @Mod.EventHandler()
     public void preInit(FMLPreInitializationEvent event) {
         Items.init();
-        // Blocks.quartz_ore.setHarvestLevel("pickaxe", 2);
-        UBCIntegration.register();
+        proxy.preinit();
     }
 
     @Mod.EventHandler()
     public void init(FMLInitializationEvent event) {
-        new FoodHandler();
-        new InteractHandler();
-        new ChunkHandler();
-        new KeybindHandler();
+        BlightCoreNetwork.init();
+        proxy.init();
     }
 
     @Mod.EventHandler()

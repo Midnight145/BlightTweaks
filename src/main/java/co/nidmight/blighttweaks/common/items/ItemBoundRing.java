@@ -75,7 +75,7 @@ public class ItemBoundRing extends ItemAngelRing implements ArmourUpgrade, IFlyi
     public void canFly(LivingUpdateEvent event) {
         if (event.entityLiving instanceof EntityPlayerMP player) {
             managePacket(player);
-            IFlyingUpgrade.super.canFly(event);
+            IFlyingUpgrade.super.canFly(player);
         }
     }
 

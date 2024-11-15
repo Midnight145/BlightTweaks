@@ -3,10 +3,8 @@ package co.nidmight.blighttweaks.common.interfaces;
 import java.util.HashSet;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.entity.living.LivingEvent;
 
 import WayofTime.alchemicalWizardry.common.items.armour.BoundArmour;
 
@@ -38,18 +36,14 @@ public interface IFlyingUpgrade {
         return false;
     }
 
-    default void canFly(LivingEvent.LivingUpdateEvent event) {
-        if (event.entity.worldObj.isRemote) {
+    default void canFly(EntityPlayer player) {
+        if (player.worldObj.isRemote) {
             return;
         }
-        EntityPlayerMP player = (EntityPlayerMP) event.entityLiving;
         if (this.shouldFly(player)) {
-            if (!flyingPlayers.contains(player.getDisplayName())) {
-                flyingPlayers.add(player.getDisplayName());
-
-                player.capabilities.allowFlying = true;
-                player.sendPlayerAbilities();
-            }
+            flyingPlayers.add(player.getDisplayName());
+            player.capabilities.allowFlying = true;
+            player.sendPlayerAbilities();
         } else {
             if (flyingPlayers.contains(player.getDisplayName())) {
                 flyingPlayers.remove(player.getDisplayName());
