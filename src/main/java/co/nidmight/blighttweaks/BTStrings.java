@@ -10,4 +10,6 @@ public class BTStrings {
     public static final String researchNoteName = "researchNote";
     public static final String oreKillerName = "worldOreKiller";
     public static final String soulSigilName = "soulSigil";
+
+    public static final String chiseledBloodstoneBricksName = "chiseledBloodstoneBricks";
 }
