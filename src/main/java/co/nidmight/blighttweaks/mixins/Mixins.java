@@ -14,17 +14,30 @@ import cpw.mods.fml.relauncher.FMLLaunchHandler;
 // and therefore under the LGPL-3.0 license.
 public enum Mixins {
 
+    // spotless:off
+
     CHISEL_BOOK_DROP_FIX(new Builder("Chisel bookshelves now drop minecraft:book:0 instead of minecraft:book:X")
         .addTargetedMod(TargetedMod.CHISEL)
         .setSide(Side.CLIENT)
         .setPhase(Phase.LATE)
         .addMixinClasses("MixinBlockMarbleBookshelf")
         .setApplyIf(() -> true)),
-    AIR_SIGIL_BUFF(new Builder("air sigil buff").addTargetedMod(TargetedMod.BLOODMAGIC)
+    AIR_SIGIL_BUFF(new Builder("air sigil buff")
+        .addTargetedMod(TargetedMod.BLOODMAGIC)
         .setSide(Side.BOTH)
         .setPhase(Phase.LATE)
         .addMixinClasses("MixinSigilAir")
-        .setApplyIf(() -> true));
+        .setApplyIf(() -> true)),
+    CUSTOMNPC_AUTOSPAWN_FIX(new Builder("AutoSpawner will always exact-copy CustomNPCs")
+        .addTargetedMod(TargetedMod.MINEFACTORY_RELOADED)
+        .setSide(Side.BOTH)
+        .setPhase(Phase.LATE)
+        .addMixinClasses("MixinAutoSpawner")
+        .setApplyIf(() -> true)),
+
+    ;
+
+    //spotless:on
 
     private final List<String> mixinClasses;
     private final List<TargetedMod> targetedMods;
