@@ -7,6 +7,7 @@ item.blighttweaks_boundRing.2.name=Fairy Wings
 item.blighttweaks_boundRing.3.name=Dragon Wings
 item.blighttweaks_boundRing.4.name=Golden Wings
 item.blighttweaks_soulSigil.name=Sigil of the Hardened Soul
+tile.blighttweaks_chiseledBloodstoneBricks.name=Chiseled Bloodstone Bricks
 
 tooltip.soulsigil.desc=For when 90% isn't enough.
 
@@ -14,6 +15,12 @@ tc.research_name.PLANTCONJURATION=Plant Conjuration
 tc.research_text.PLANTCONJURATION=For when you need that extra blaze powder
 
 tc.research_page.PLANTCONJURATION.0=By combining various alchemical ingredients with magic and life, you can create different types of plants, even those that may have gone extinct.<LINE>
+
+tc.research_name.CHISELEDBLOODSTONEBRICKS=Chiseled Bloodstone Bricks
+tc.research_text.CHISELEDBLOODSTONEBRICKS=The Dark One's favorite stabilizer
+
+tc.research_page.CHISELEDBLOODSTONEBRICKS.0=Exposing bloodstone bricks to a large amount of ordo as well as some terra and aqua causes the blood inside to crystallize in a repeating pattern. This pattern is so inherently stable that the resulting bricks act as a stabilizer for any nearby infusion altars.
+
 ubc.blighttweaks.quartz=Terrestrial Nether Quartz
 
 tc.research_page.PURITYFOCUS.BT.1=You have found a way to infuse the properties of an ethereal bloom into a wand focus. When you right-click on a block, a 3x3 area and all blocks above and below it will immediately be cured of taint. Left-click will clean only one column of blocks. Each column of tainted blocks that is purified costs §70.15 Ordo§0 and §20.1 Terra§0 vis.<BR>Crusted taint will leave behind large amounts of flux goo, so be wary of creating rapidly-growing thaumic slimes when working near it.

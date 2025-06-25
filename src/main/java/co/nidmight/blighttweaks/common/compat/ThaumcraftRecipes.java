@@ -1,29 +1,33 @@
 package co.nidmight.blighttweaks.common.compat;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import WayofTime.alchemicalWizardry.ModBlocks;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.CrucibleRecipe;
+import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigBlocks;
+import thaumcraft.common.config.ConfigItems;
 
 public class ThaumcraftRecipes {
 
     public static void init() {
         // Add research
-        AspectList aspectList = new AspectList().add(Aspect.PLANT, 10)
+        AspectList plantAspectList = new AspectList().add(Aspect.PLANT, 10)
             .add(Aspect.LIFE, 10)
             .add(Aspect.MAGIC, 10);
 
         ResearchItem plantConjurationResearch = new ResearchItem(
             "PLANTCONJURATION",
             "ALCHEMY",
-            aspectList,
+            plantAspectList,
             -5,
             0,
             2,
@@ -85,6 +89,41 @@ public class ThaumcraftRecipes {
         plantConjurationResearch.setParents("ALCHEMICALDUPLICATION")
             .setConcealed()
             .setSecondary()
+            .registerResearchItem();
+
+        AspectList bloodstoneAspectList = new AspectList().add(Aspect.EARTH, 8)
+            .add(Aspect.ORDER, 8)
+            .add(Aspect.LIFE, 4);
+
+        Block chiseledBloodstoneBricks = co.nidmight.blighttweaks.common.blocks.Blocks.chiseledBloodstoneBricks;
+        ResearchItem chiseledBloodstoneBricksResearch = new ResearchItem(
+            "CHISELEDBLOODSTONEBRICKS",
+            "ARTIFICE",
+            bloodstoneAspectList,
+            5,
+            -5,
+            2,
+            new ItemStack(chiseledBloodstoneBricks, 1, 5));
+
+        ShapedArcaneRecipe chiseledBloodstoneBrickRecipe = ThaumcraftApi.addArcaneCraftingRecipe(
+            "CHISELEDBLOODSTONEBRICKS",
+            new ItemStack(chiseledBloodstoneBricks, 4),
+            new AspectList().add(Aspect.ORDER, 32)
+                .add(Aspect.EARTH, 8)
+                .add(Aspect.WATER, 4),
+            " B ",
+            "BSB",
+            " B ",
+            'B',
+            new ItemStack(ModBlocks.largeBloodStoneBrick, 1),
+            'S',
+            new ItemStack(ConfigItems.itemShard, 1, 4));
+        chiseledBloodstoneBricksResearch.setPages(
+            new ResearchPage("tc.research_page.CHISELEDBLOODSTONEBRICKS.0"),
+            new ResearchPage(chiseledBloodstoneBrickRecipe));
+        chiseledBloodstoneBricksResearch.setParents("ARCANESTONE")
+            .setParentsHidden("INFUSION")
+            .setConcealed()
             .registerResearchItem();
     }
 

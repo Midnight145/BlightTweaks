@@ -6,6 +6,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import co.nidmight.blighttweaks.common.blocks.Blocks;
 import co.nidmight.blighttweaks.common.compat.ThaumcraftRecipes;
 import co.nidmight.blighttweaks.common.items.Items;
 import co.nidmight.blighttweaks.common.network.BlightCoreNetwork;
@@ -33,6 +34,7 @@ public class BlightCore {
     @Mod.EventHandler()
     public void preInit(FMLPreInitializationEvent event) {
         Items.init();
+        Blocks.init();
         proxy.preinit();
     }
 
