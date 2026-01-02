@@ -50,4 +50,5 @@ dependencies {
     api(rfg.deobf("curse.maven:eu2tweaks-274356:2464062"))
     api(rfg.deobf(project.files("libs/chisel.jar")))
     api("curse.maven:mfr-66672:2277486")
+    api(project.files("libs/blightbuster-v3.1.0-api.jar"))
 }
