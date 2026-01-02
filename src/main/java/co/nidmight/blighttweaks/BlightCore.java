@@ -1,5 +1,8 @@
 package co.nidmight.blighttweaks;
 
+import net.minecraft.entity.passive.EntityOcelot;
+import net.minecraft.entity.passive.EntityVillager;
+import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ChestGenHooks;
 
@@ -20,6 +23,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import noppes.npcs.CustomItems;
 import noppes.npcs.blocks.BlockBlood;
+import talonos.blightbuster.api.BlightbusterAPI;
 
 @Mod(modid = BTStrings.MOD_ID, name = BTStrings.MOD_NAME, version = BTStrings.VERSION)
 public class BlightCore {
@@ -54,8 +58,11 @@ public class BlightCore {
         if (broadsword != null) {
             broadsword.setItemDamage(-1);
             ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST)
-                .removeItem(broadsword);
+                    .removeItem(broadsword);
         }
+        BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedWolf", EntityWolf.class);
+        BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedOcelot", EntityOcelot.class);
+        BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedTownsfolk", EntityVillager.class);
     }
 
     @Mod.EventHandler()
