@@ -58,7 +58,7 @@ public class BlightCore {
         if (broadsword != null) {
             broadsword.setItemDamage(-1);
             ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST)
-                    .removeItem(broadsword);
+                .removeItem(broadsword);
         }
         BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedWolf", EntityWolf.class);
         BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedOcelot", EntityOcelot.class);
