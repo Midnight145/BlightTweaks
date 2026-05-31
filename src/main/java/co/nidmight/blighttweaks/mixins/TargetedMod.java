@@ -11,7 +11,8 @@ public enum TargetedMod {
     VANILLA("Minecraft", null),
     CHISEL("Chisel", "chisel"),
     BLOODMAGIC("AlchemicalWizardry", "AWWayofTime"),
-    MINEFACTORY_RELOADED("MineFactoryReloaded", null);
+    MINEFACTORY_RELOADED("MineFactoryReloaded", null),
+    EXTRA_CELLS("extracells", null);
 
     /** The "name" in the {@link Mod @Mod} annotation */
     public final String modName;

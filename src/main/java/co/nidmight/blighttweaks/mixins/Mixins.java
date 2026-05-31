@@ -34,6 +34,18 @@ public enum Mixins {
         .setPhase(Phase.LATE)
         .addMixinClasses("MixinAutoSpawner")
         .setApplyIf(() -> true)),
+    EC2_TE_FIX(new Builder("Fixes the ThaumicEnergistics EC2 incompatibility")
+        .addTargetedMod(TargetedMod.EXTRA_CELLS)
+        .setSide(Side.BOTH)
+        .setPhase(Phase.LATE)
+        .addMixinClasses("MixinExtraCellsThaumicEnergistics")
+        .setApplyIf(() -> true)),
+    EC2_WT_DISABLE(new Builder("Fixes the ThaumicEnergistics EC2 incompatibility")
+            .addTargetedMod(TargetedMod.EXTRA_CELLS)
+            .setSide(Side.BOTH)
+            .setPhase(Phase.LATE)
+            .addMixinClasses("MixinUniversalTerminal$")
+            .setApplyIf(() -> true)),
 
     ;
 
