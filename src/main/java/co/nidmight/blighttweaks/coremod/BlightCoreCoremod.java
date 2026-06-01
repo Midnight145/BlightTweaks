@@ -21,6 +21,8 @@ import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 
 public class BlightCoreCoremod extends DummyModContainer implements IFMLLoadingPlugin {
 
+    private static boolean isObfuscatedEnvironment = false;
+
     public BlightCoreCoremod() {
         super(new ModMetadata());
 
@@ -60,6 +62,7 @@ public class BlightCoreCoremod extends DummyModContainer implements IFMLLoadingP
     @Override
     public void injectData(Map<String, Object> data) {
         boolean isObfuscated = (Boolean) data.get("runtimeDeobfuscationEnabled");
+        this.isObfuscatedEnvironment = isObfuscated;
         editors.add(new BlockOceanNodesEditor());
         editors.add(new BlockTaintedSandEditor(isObfuscated));
         editors.add(new BlockTaintedBotaniaFlowerEditor());
@@ -70,6 +73,10 @@ public class BlightCoreCoremod extends DummyModContainer implements IFMLLoadingP
     @Override
     public String getAccessTransformerClass() {
         return null;
+    }
+
+    public static boolean isObfuscatedEnvironment() {
+        return isObfuscatedEnvironment;
     }
 
 }

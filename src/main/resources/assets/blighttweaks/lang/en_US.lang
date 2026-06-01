@@ -35,3 +35,12 @@ tc.research_page.TRANSALUMINUM.1=You have discovered a way to multiply aluminum 
 tc.research_page.TRANSMANGANESE.1=You have discovered a way to multiply manganese by steeping manganese nuggets in §5metallum§0 harvested from other metals.
 tc.research_page.TRANSZINC.1=You have discovered a way to multiply zinc by steeping zinc nuggets in §5metallum§0 harvested from other metals.
 tc.research_page.TRANSQUICKSILVER.1=You have discovered a way to multiply quicksilver by steeping quicksilver drops in §5metallum§0 harvested from other metals.
+
+item.blighttweaks.snickersbar.name=Emergency Nutrient Bar
+blighttweaks.chunkloader=Ender Overseer
+blighttweaks.spotloader=Ender Watcher
+
+tc.research_name.CHICKENCHUNKS=Chunk Loader
+tc.research_text.CHICKENCHUNKS=It's hard not to break the fourth wall here...
+tc.research_page.CHICKENCHUNKS.0=Many things in this world seem not to work unless you are directly observing them. You're not sure why. Probably it has something to do with quantum physics. For the most part, this is a good thing, as trees will not collapse and swarmers will not form unless you are close enough to deal with the ramifications right away. However, it can get annoying if you are forced to watch your blooms or totems slowly clean land.
+tc.research_page.CHICKENCHUNKS.1=To solve this problem, you have created the Ender Observer. It is a tiny device that watches a 16 meter x 16 meter area, keeping everything running as though you were personally present.<BR>Multiple ender watchers can be combined into and ender overseer using an infusion ritual. The ender overseer can observe (and thus cause time to pass in) an area nearly a third of a kilometer to a side, and is also highly configurable.

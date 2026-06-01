@@ -20,6 +20,7 @@ import co.nidmight.blighttweaks.common.compat.ThaumcraftRecipes;
 import co.nidmight.blighttweaks.common.items.Items;
 import co.nidmight.blighttweaks.common.network.BlightCoreNetwork;
 import co.nidmight.blighttweaks.common.proxy.CommonProxy;
+import co.nidmight.blighttweaks.recipes.RecipeHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -72,6 +73,9 @@ public class BlightCore {
             BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedWolf", EntityWolf.class);
             BlightbusterAPI.registerCustomNpcPurificationMapping("TaintedTownsfolk", EntityVillager.class);
         }
+        RecipeHandler handler = new RecipeHandler();
+        handler.build();
+        handler.applyEditors();
     }
 
     @Mod.EventHandler()
