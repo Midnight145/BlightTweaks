@@ -108,7 +108,7 @@ public class ThaumcraftRecipes {
         ShapedArcaneRecipe chiseledBloodstoneBrickRecipe = ThaumcraftApi.addArcaneCraftingRecipe(
             "CHISELEDBLOODSTONEBRICKS",
             new ItemStack(chiseledBloodstoneBricks, 4),
-            new AspectList().add(Aspect.ORDER, 32)
+            new AspectList().add(Aspect.ORDER, 16)
                 .add(Aspect.EARTH, 8)
                 .add(Aspect.WATER, 4),
             " B ",
