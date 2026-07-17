@@ -11,6 +11,243 @@ tile.blighttweaks_chiseledBloodstoneBricks.name=Chiseled Bloodstone Bricks
 
 tooltip.soulsigil.desc=For when 90% isn't enough.
 
+
+# Below this line are all modifications to things added outside of BlightTweaks. This includes item tooltips, research entries, and display name overrides.
+
+# Item Tooltips
+
+tooltip.npcStoneReversedDagger.desc.1=Because holding it back-
+tooltip.npcStoneReversedDagger.desc.2=wards makes it cooler.
+
+tooltip.npcSlingshot.desc.1=§9+2 attack damage
+tooltip.npcSlingshot.desc.2=Fires vanilla cobblestone,
+tooltip.npcSlingshot.desc.3=but not alien variants.
+
+tooltip.npcFullWoodenShield.desc.1=Hold right click to reduce
+tooltip.npcFullWoodenShield.desc.2=attack damage greatly!
+
+tooltip.npcStoneShield.desc.1=Hold right click to reduce
+tooltip.npcStoneShield.desc.2=attack damage greatly!
+
+tooltip.npcOcarina.desc.1=Right click to play.
+tooltip.npcOcarina.desc.2=Almost as good as Link's.
+
+tooltip.npcHarp.desc.1=Right click to play. You
+tooltip.npcHarp.desc.2=aren't very skilled.
+
+tooltip.npcCrowbar.desc.1=A quest item. Less effective as
+tooltip.npcCrowbar.desc.2=a weapon than Gordon Freeman
+tooltip.npcCrowbar.desc.3=would have you believe.
+
+tooltip.npcFrenchHorn.desc.1=A quest item. Very Distracting
+tooltip.npcFrenchHorn.desc.2=Right click to play.
+tooltip.npcFrenchHorn.desc.3=Does it sound French?
+
+tooltip.npcPendant.desc.1=Looks cool.
+tooltip.npcPendant.desc.2=Does nothing.
+
+tooltip.npcLocket.desc.1=Looks cool.
+tooltip.npcLocket.desc.2=Does nothing.
+
+tooltip.npcStatuette.desc.1=Looks cool.
+tooltip.npcStatuette.desc.2=Does nothing.
+
+tooltip.npcGun.damage=%d damage
+tooltip.npcGun.onlyFires=Only fires §9%s Bullets
+tooltip.npcGun.highlyInaccurate=Highly inaccurate
+tooltip.npcGunGold.highlyInaccurate1=Highly inaccurate. Why would
+tooltip.npcGunGold.highlyInaccurate2=you build this? Bling?
+tooltip.npcGunBronze.highlyInaccurate1=Highly inaccurate. You should consider
+tooltip.npcGunBronze.highlyInaccurate2=building the iron gun instead; it's cheaper.
+tooltip.npcGunMachine.highlyInaccurate1=Highly inaccurate. Hold down
+tooltip.npcGunMachine.highlyInaccurate2=right-click to fire. Once empty,
+tooltip.npcGunMachine.highlyInaccurate3=hold right-click to reload.
+
+tooltip.npcGunBulletWooden=Wooden
+tooltip.npcGunBulletStone=Stone
+tooltip.npcGunBulletIron=Iron
+tooltip.npcGunBulletGold=Gold
+tooltip.npcGunBulletBronze=Bronze
+tooltip.npcGunBulletDiamond=Diamond
+tooltip.npcGunBulletEmerald=Emerald
+tooltip.npcGunBulletMachine=Black
+
+tooltip.manaCookieDough1=Making it with Fames, Gula, or
+tooltip.manaCookieDough2=Corpus beans yields more dough.
+
+tooltip.manaCookieRaw1=Disgusting. Mana beans
+tooltip.manaCookieRaw2=taste terrible. Throw into a
+tooltip.manaCookieRaw3=mana pool to make it edible.
+
+tooltip.manaCookie1=Completely restores hunger when
+tooltip.manaCookie2=eaten. Immune to diminishing returns.
+
+# Added laser focus display names and tooltips
+blighttweaks.laserFocus0=Clear Focus
+tooltip.laserFocus0.1=Increases the chance of finding
+tooltip.laserFocus0.2=Salt and Nether Quartz.
+
+blighttweaks.laserFocus1=Nonmetal Focus
+tooltip.laserFocus1.1=Increases the chance of finding some nonmetal
+tooltip.laserFocus1.2=ores such as Redstone, Sulfur, and Bitumen.
+
+blighttweaks.laserFocus2=Hard Alien Focus
+tooltip.laserFocus2.1=Increases the chance of finding high-grade
+tooltip.laserFocus2.2=alien metals such as Atlarus and Adamantine.
+
+blighttweaks.laserFocus3=Diamond Focus
+tooltip.laserFocus3.1=Increases the chance
+tooltip.laserFocus3.2=of finding Diamonds.
+
+blighttweaks.laserFocus4=Power Focus
+tooltip.laserFocus4.1=Increases the chance of
+tooltip.laserFocus4.2=finding Coal and Nuclear Fuel.
+
+blighttweaks.laserFocus5=Fishy Focus
+tooltip.laserFocus5.1=Increases the chance of
+tooltip.laserFocus5.2=finding... fish? Probably
+tooltip.laserFocus5.3=best not to use this.
+
+blighttweaks.laserFocus6=Nether Alien Focus
+tooltip.laserFocus6.1=Increases the chance of
+tooltip.laserFocus6.2=finding alien nether ores.
+
+blighttweaks.laserFocus7=Utility Metal Focus
+tooltip.laserFocus7.1=Increases the chance of finding
+tooltip.laserFocus7.2=useful metals like iron and gold.
+
+blighttweaks.laserFocus8=Tech Focus
+tooltip.laserFocus8.1=Increases the chance of
+tooltip.laserFocus8.2=finding the six tech metals.
+
+blighttweaks.laserFocus9=Certus Focus
+tooltip.laserFocus9.1=Increases the chance of
+tooltip.laserFocus9.2=finding Certus Quartz.
+
+blighttweaks.laserFocus10=Shard Focus
+tooltip.laserFocus10.1=Increases the chance of
+tooltip.laserFocus10.2=finding Infused Stone.
+
+blighttweaks.laserFocus11=Lapis Focus
+tooltip.laserFocus11.1=Increases the chance
+tooltip.laserFocus11.2=of finding Lapis.
+
+blighttweaks.laserFocus12=Soft Alien Focus
+tooltip.laserFocus12.1=Increases the chance of finding low-grade
+tooltip.laserFocus12.2=alien metals like Prometheum and Oureclase.
+
+blighttweaks.laserFocus13=Emerald Focus
+tooltip.laserFocus13.1=Increases the chance
+tooltip.laserFocus13.2=of finding Emeralds.
+
+blighttweaks.laserFocus14=Nether Focus
+tooltip.laserFocus14.1=Increases the chance of finding
+tooltip.laserFocus14.2=nether variants of most ores.
+
+blighttweaks.laserFocus15=End Focus
+tooltip.laserFocus15.1=Increases the chance of
+tooltip.laserFocus15.2=finding alien ender metals.
+
+# Item Display Name Overrides
+item.blighttweaks.npcHarp.name=Lyre
+item.blighttweaks.snickersbar.name=Emergency Nutrient Bar
+
+# ItemStack Display Name Overrides
+blighttweaks.chunkloader=Ender Overseer
+blighttweaks.spotloader=Ender Watcher
+
+# Botania Entries
+
+botania.page.blightfallFlower0=Around the world, you may stumble upon a large variety of Mystical Flora. Finding them may be hard, because the taint has nearly driven them to extinction.<br>They come in a total of &416 &0different colors.<br>Once you find some, it becomes possible to grow more of these flowers using &1Floral Fertilizer&0 (read on).
+botania.page.blightfallFlower6=Right clicking the &1Floral Powder&0 in any &1Wool&0 or &1Carpet&0 changes its color to the color of the powder.<br>By mixing the &1Floral Powder&0 with some &1Bone Meal&0, it's possible to create &1Floral Fertilizer&0, which will grow a small amount of &1Mystical Flowers&0 in the nearby vicinity. The color of the flowers that grow depends on the flowers used to craft the fertilizer.
+botania.page.blightfallFlower8=Normal flowers simply cannot be made into floral fertilizer, no matter what you may have heard. If you have no mystical flowers, and want more, perhaps the Thaumaturges have a way to help? You should look in the Thaumonomicon for more info.
+botania.page.blightfallFlower9=There's also a taller variants of the typical &1Mystical Flowers&0. These can only be gathered with &1Shears&0, but can be used to obtain twice the amount of petals a normal flower would yield. They're a bit too big for dye, though.<br>They can be made by fertilizing a &1Mystical Flower&0 with &1Bone Meal&0.
+
+botania.page.BlightfallPureDaisy5=These flowers also seem to have a &1cleansing&0 effect on the taint. This makes it easy to spot them &1in the wild&0; just look for small patches of purified land.
+
+botania.page.blightfallElfMessage1=&oGreetings. We noticed that our portal was opened via a link from another world. That's rather shocking news indeed. We thank you very much for providing us with a repository of the knowledge from your world, as to keep us up to date to what happened since we left it. Speaking of which... what in Freya's name has happened over there? It seems to have been woefully mismanaged!
+botania.page.blightfallElfMessag3=&oThe link you have managed to establish is rather weak, no living beings will be able to go through. We're perfectly fine with that; we see no need to risk our lands becoming infected with your taint. There's another positive side; the link strikes the fabric of time of both our worlds in a way where it doesn't keep them in sync. That's the reason why you received your book back so quickly.
+
+botania.page.blightfallTainthistle=The disgusting &1Tainthistle&0 derives sustenance from the tainted runoff of magical experiments. It'll suck up any such substance it can find and try to turn it into mana. <br>Because it is born of thaumaturgic energies, it can be created only by thaumaturges. Research via a &1Thaumonomicon&0 should reveal its recipe.
+botania.page.blightfallEuclidaisy=The eerie, pink &1Euclidaisy&0 is an oddity. It uses large amounts of mana to conjure some sort of ethereal substance. <br>Thaumaturges seem to covet this ethereal substance. Likely, it is they who invented it. Research via a &1Thaumonomicon&0 should reveal its recipe.
+botania.page.blightfallWhisperweed=The &1Whisperweed&0 is an unpleasant plant that whispers thaumaturgic secrets into the ears of anyone who'll listen.<br>Because the secrets are thaumaturgic in nature, it's obvious this plant is their doing. Research via a &1Thaumonomicon&0 should reveal its recipe.
+
+botania.entry.etherealBloom=Ethereal Bloom
+botania.page.etherealBloom0=The thaumaturges might believe that they own the concept of ethereal blooms, but they're wrong. The bloom is a flower, and all things flowery belong to the botanist. Obviously, there is a way to make them in a petal apothecary.
+botania.page.etherealBloom1=&oRequires a surprising amount of iron.&r"
+botania.entry.shimmerleaf=Shimmerleaf
+botania.page.shimmerleaf0=The thaumaturges might believe that they own the concept of ethereal blooms, but they're wrong. The bloom is a flower, and all things flowery belong to the botanist. Obviously, there is a way to make them in a petal apothecary.
+botania.page.shimmerleaf1=&oWay easier than with blood magic. What'd you expect?&r
+
+tc.research_name.THAUMOMORPHICESSENCE=Thaumomorphic Botanist Essence
+tc.research_text.THAUMOMORPHICESSENCE=Making flowers more Mystical
+tc.research_page.THAUMOMORPHICESSENCE.0=Those mystical flowers must have come from somewhere. Obviously, a wizard did it. And if a wizard could do it, a different wizard should be able to do it again.<LINE>Thaumomorphic botanist essence, in addition to being hard to pronounce, allows a thaumoturge to create mystical flowers from dandelions and poppies. Adding any dye is required to decide the color of the resulting mystical flower.
+tc.research_page.THAUMOMORPHICESSENCE.1=Without an easily accessible source of mana, the mana pearl required will take great effort to procure. Your arcane worktable is absolutely not the correct tool for this job, so it will take a large amount of vis and some salis mundus to keep this craft stable enough to merge the mana and ender magics.
+tc.research_page.THAUMOMORPHICESSENCE.2=Mana is a form of mystical energy with strange sensory properties. You are able to create a fluid in your crucible that matches this description perfectly, but bottling it causes it to not be stable enough to add to a mana pool. Despite its tempting appearance, ingestion is ill-advised.<LINE>While you have devised a way to create it yourself, there may also be some bottles of mana that were left behind by this planet's previous inhabitants. Some may rarely be found in their structures or bartered for with creatures who deal in rare and precious items.
+
+# these get applied automatically due to lang entries being applied alphabetically by modid
+botania.page.daybloom1=&1Dayblooms&0 produce feeble amounts of &4Mana&0, so perhaps hastily upgrading to &1Endoflames&0 or other &1active flowers&0, once available, might be a good idea.
+botania.page.nightshade0=The &1Nightshade&0 is the dark counterpart of the &1Daybloom&0, as it generates &4Mana&0 passively in any situation the &1Daybloom&0 can not, as long as it's nighttime.
+botania.page.hydroangeas0=&1Hydroangeas&0 act as a liquid based passive generator. They will suck up any &1Still Water&0 in a 3x3 area around it, on the same height, creating &4Mana&0 from it. The amount they produce is comparable to that of an &1Endoflame&0. They also seem to function faster during &4Rain&0.
+botania.page.flowerShrinking0=Some functional flowers have a bit too much reach. Sometimes one might not want that to be the case. Tossing one of those few flowers into a &1Mana Pool&0 with an &1Alchemy Catalyst&0 will, at the cost of some &4Mana&0, shrink it, making its radius smaller. Every other function remains the same.<br>This can also be done for passive generating flowers, turning them into decorative versions with no function.
+botania.page.passiveGen1=At the start of a botanist's career, only very basic and rudimentary &4Passive Flowers&0 are available, such as the &1Daybloom&0 or &1Nightshade&0.<br>These flowers are required to advance on to more potent and effective &4Active Flowers&0, but they should not be relied upon aside from being a stepping stone. While &4Passive Flowers&0 will not decay into &1Dead Bushes&0, their mana output is minimal.
+botania.page.kekimurus0=&1Cake&0 is delicious, everyone loves it, flowers included.<br>The &1Kekimurus&0 is one of these &1Cake&0 aficionados, and will eat any it spots nearby, using its enriching nutrients to create &4Mana&0.<br>The magical nature of Thaumic Cakes sadly makes them indigestible by the &1Kekimurus&0.
+botania.page.lens32=The &1Kindle Lens&0 is infused with a burning spark. When it hits a block, it'll set it on fire, but it doesn't seem to set any living beings on fire.
+botania.tagline.overgrowthSeed=An elusive object that powers up flowers
+botania.page.overgrowthSeed0=An &1Overgrowth Seed&0 is an elusive item, which can be used to enchant a piece of &1Grass&0, via right clicking on it in the world, creating &1Enchanted Soil&0. Flowers that are rooted on this &1Enchanted Soil&0 will function at double the normal speed.<br>&4Passive flowers&0 planted on this soil won't get the speed boost. These rare items are better used on more powerful flowers anyways.
+botania.page.enderAir0=The air present in the void of the &1End&0 seems to have some mutating properties. Smelting some &1End Stone&0 in an induction smelter will capture some of that air in a glass bottle, which can then later be tossed similarly to a splash potion, turning nearby &1Stone&0 on the landing point into more &1End Stone&0.
+botania.entry.kingKey=Holy Sword Excaliber
+botania.tagline.kingKey=You don't vote for kings!
+botania.page.kingKey0=The &1Holy Sword Excaliber&0 is a powerful weapon fit for a true king. This legendary sword is unbreakable and does more damage than any mundane sword. It shoots out homing beams of light that will damage your enemies with left click. Wielding the sword also proves your authority over the lowly peasants, increasing the speed of your strides.
+botania.page.mushrooms0=Sprinkling some &1Floral Powder&0 on &1Mushrooms&0 seems to have the interesting effect of them mutating into the respective color of powder, gaining a new shape and getting the ability to emit dim light. Thaumaturges seem to like to put them around their infusion altars.
+botania.page.tcIntegration5=Next off, there's a few varied resources or constructs that can work as paraphernalia for an &1Infusion Altar&0, to lower its instability, these come in the form of &1Glimmering Flowers, Glimmering Mushrooms, Floating Flowers and any variety of Pylons&0.
+
+botaniamisc.edition=Blightfall Edition
+
+botania.page.blightfallLexicon=Copying the Lexicon
+
+item.botania:travelBelt.name=Sojourner's Sash
+
+# Thaumcraft Research Entries
+
+tc.research_name.CHICKENCHUNKS=Chunk Loader
+tc.research_text.CHICKENCHUNKS=It's hard not to break the fourth wall here...
+tc.research_page.CHICKENCHUNKS.1=Many things in this world seem not to work unless you are directly observing them. You're not sure why. Probably it has something to do with quantum physics. For the most part, this is a good thing, as trees will not collapse and swarmers will not form unless you are close enough to deal with the ramifications right away. However, it can get annoying if you are forced to watch your blooms or totems slowly clean land.
+tc.research_page.CHICKENCHUNKS.2=To solve this problem, you have created the Ender Observer. It is a tiny device that watches a 16 meter x 16 meter area, keeping everything running as though you were personally present.<BR>Multiple ender watchers can be combined into and ender overseer using an infusion ritual. The ender overseer can observe (and thus cause time to pass in) an area nearly a third of a kilometer to a side, and is also highly configurable.
+
+tc.research_page.CRIMSON.1=Much of this book is written in a spidery and unintelligible script, but what you do understand offers some strange insights into the goal of a group called the "Crimson Cult".\nTheir origins and current whereabouts are shrouded in mystery, but it seems their goal was the perfection of a ritual they referred to as "Apertis Oculis" - Opening the Eye. What it does is unclear, but you doubt it is anything good.\nInterestingly enough, you think thaumaturgy might offer the missing pieces they had so long sought. Obviously only a madman would pursue this line of study...
+
+tc.research_name.CULTITEMS=Crimson Cult Paraphernalia
+tc.research_text.CULTITEMS=Forbidden Fashion
+tc.research_page.CULTITEMS.1=Further study into the crimson rites has allowed you to decipher instructions on how to produce what must have been the armor, robes, and banners used by the Crimson Cult. Since you have been unable to find any living members who have survived the blight that has overtaken this planet, this may be a way to establish your own branch of the cult should you desire to do so.
+tc.research_page.CULTITEMS.2=Crimson cult banners may be created by embroidering a red banner using a gold nugget with a touch of ordo vis. Thaumcraft and Et Futurum Requiem red banners will both work for this purpose.
+
+tc.research_name.ANGELRING=Angel Rings
+tc.research_text.ANGELRING=More simple than jetpacks
+tc.research_page.ANGELRING.1=Flight is important, and a thaumostatic harness is great, but there comes a time where you want to jettison the bulky thaumic apparatus and fly in a more natural way.<BR>You decided to create a ring with flight capabilties. Simply having this ring in your inventory will grant you the ability to fly, as if you were in creative mode.<BR>This ring comes in five varieties. They differ only cosmetically.
+
+tc.research_name.TAINTEGG=Giant Taintacle
+tc.research_text.TAINTEGG=What came first, the taint or the egg?
+tc.research_page.TAINTEGG.1=The Primordial Pearl resonates with energies that are fundamentally different from the magic of this reality, and yet these energies readily fuse with so many parts of this world. Perhaps this is, objectively, more unsettling than I find it to be, but I have already done so much in the pursuit of knowledge.<BR>I've studied much of this world, and I've learned so much from it. I've studied magic, I've studied taint, I've studied--and been to--the void...and I've studied the Pearl.
+tc.research_page.TAINTEGG.2=Perhaps it was the Warp that compelled me to perform this research, or perhaps it was only my curious nature and thirst for knowledge. The line between the two is thinner than I'd like to admit.<BR>I have built upon the Taint, and designed the means to summon--nay, to spawn--a monstrosity far beyond anything this planet has seen. To create life in this way, or even a corrupt and twisted facsimile of life, will be a major undertaking.<LINE>I hold the means to be the savior of this world; it only seems fitting that I hold the means to be its destroyer.
+
+tc.research_name.BLACKSTONE=Blackstone
+tc.research_text.BLACKSTONE=Making things pretty
+tc.research_page.BLACKSTONE.0=You have seen visions from what you can only assume is a time far removed from your own. These visions have shown you large structures in the Nether inhabited by brutish pig-man hybrids who are obsessed with gold. These "bastions" were composed of dark stone blocks, which have particularly piqued your interest for their decorative potential. Using the same principle as arcane stone, exposing some mundane blackstone cobble to the energy emitted by an order shard allows you to fabricate some of those blocks.
+tc.research_page.BLACKSTONE.1=You can create a block of gilded blackstone by exposing any of these blackstone blocks to lucrum essentia in a crucible. This block seemed to be highly prized by those creatures in your visions.
+
+tc.research_name.ELYTRA=Elytra Wingsuits
+tc.research_text.ELYTRA=Bring a water bucket to break your fall
+tc.research_page.ELYTRA.1=While the thaumostatic harness certainly does its job in allowing you to fly, it lacks a certain... grace to its movements. Dragons and bats are able to cut through the air with ease, but you lack the wings that they have. That is, until today. By adding feathers, leather, and air shards to a belt and infusing it with essentia to aid in mobility and emulate the great Ender Dragon, you have created a piece of equipment that you have dubbed "Elytra".
+tc.research_page.ELYTRA.2=While equipped on your body or wings slot, you are able to deploy the wings behind you by jumping in midair. Unlike the mighty dragon or even the lowly bat, you are unable to flap your wings to gain velocity while flying. However, these wings allow gliding over long distances and performing deft acrobatic maneuvers with your momentum while in flight.
+tc.research_page.ELYTRA.3=While you may be unable to flap your wings to gain speed, it is possible to launch yourself a great distance through the use of firework rockets. Despite defying all reason, firework rockets containing explosive charges seem to not damage the user. Caution must be taken to land gently, or a hasty thaumaturge will meet his end due to the kinetic forces exerted upon his body.
+tc.research_page.ELYTRA.4=The elytra will slowly take damage while in flight. This can be mitigated by the Unbreaking enchantment, which can be applied by an anvil or through infusion enchanting. Other means of enchanting, such as the enchantment table, seem to be unable to operate upon the elytra. Damaged elytra may be repaired with leather in an anvil or through other, more magical means.
+
+tc.research_name.CHORUSFLOWER=Chorus Flowers
+tc.research_text.CHORUSFLOWER=Houdini's favorite snack
+tc.research_page.CHORUSFLOWER.1=Your use of alienis to create wings has caused you to wonder about its effects on other forms of life. Taking some sugar cane and infusing it with the essence of the end has left you with quite a strange specimen. This "chorus flower" only seems to grow on end stone, and it will slowly grow upwards, occasionally splitting into multiple thin branches. Much like the sugar cane it is made from, breaking the base will fell the whole chorus plant, but any chorus flowers will be lost. They must be harvested by hand or dislodged by a well-aimed arrow. Flowers that have reached their maximum height will darken.
+tc.research_page.CHORUSFLOWER.2=When broken, the body of a chorus plant will often drop alien-looking "chorus fruits". These fruits give off a kind of energy that you have only seen left behind after an enderman teleports. Smelting them in a furnace hardens their soft flesh, removing any nutritional value, but this rigidity allows for them to be shaped into eye-catching purple bricks. Additionally, attaching a popped chorus fruit to the end of a blaze rod appears to cause it to continuously emit light, just like a torch.
+
 tc.research_name.PLANTCONJURATION=Plant Conjuration
 tc.research_text.PLANTCONJURATION=For when you need that extra blaze powder
 
@@ -35,3 +272,11 @@ tc.research_page.TRANSALUMINUM.1=You have discovered a way to multiply aluminum 
 tc.research_page.TRANSMANGANESE.1=You have discovered a way to multiply manganese by steeping manganese nuggets in §5metallum§0 harvested from other metals.
 tc.research_page.TRANSZINC.1=You have discovered a way to multiply zinc by steeping zinc nuggets in §5metallum§0 harvested from other metals.
 tc.research_page.TRANSQUICKSILVER.1=You have discovered a way to multiply quicksilver by steeping quicksilver drops in §5metallum§0 harvested from other metals.
+
+tc.research_name.TIERSIX=A Greater Altar
+tc.research_text.TIERSIX=When Tier 5 isn't enough...
+tc.research_page.TIERSIX.1=Despite their lust for power, most Blood Mages hit a ceiling with a Tier 5 altar. The raw energy of anything beyond is simply far too much for most materials to handle, and the use of Beacons at that point is the only thing that can barely keep things under control.<BR>Somehow, in opposition to the natural order, you have broken this ceiling. Inspired by the crystalline structure of Beacons, you have devised a crystal cluster infused with the essences of life and spirit to bind the raw life energy to the altar. They are quite expensive to make, but having made the decision to go down this path, they are worth the effort.
+
+tc.research_name.DAWNTOOL=A New Dawn
+tc.research_text.DAWNTOOL=Who needs tier 6?
+tc.research_page.DAWNTOOL.1=The Dark One has instructed you to create a ritual that will augment your Dawn Machine with life essence; however, you need to improve your ritual crafting.<BR>You have created a tool that will allow you to create Dawn Runes, the final bridge you need to link the two.

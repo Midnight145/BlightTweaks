@@ -33,6 +33,7 @@
  *
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
+//file:noinspection DependencyNotationArgument
 dependencies {
     api("com.github.GTNewHorizons:Baubles-Expanded:2.2.21-GTNH:dev@jar")
     api("com.github.GTNewHorizons:AppleCore:3.3.11:dev")
@@ -49,6 +50,18 @@ dependencies {
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.8.100-GTNH:dev")
     api(rfg.deobf("curse.maven:eu2tweaks-274356:2464062"))
     api(rfg.deobf(project.files("libs/chisel.jar")))
-    api(project.files("libs/blightbuster-v3.1.0-api.jar"))
+    api(project.files("libs/blightbuster-v3.1.0.jar"))
     api("curse.maven:mfr-66672:2277486")
+    api(rfg.deobf("curse.maven:harvestcraft-221857:2270206"))
+    api(rfg.deobf("curse.maven:thermalexpansion-69163:2388759"))
+    api("ganymedes01.etfuturum:Et-Futurum-Requiem:2.6.18-GTNH:dev@jar")
+    api("curse.maven:thermalfoundation-222880:2388753")
+    api("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-966-GTNH:dev@jar")
+    api("com.github.GTNewHorizons:Jabba:1.5.20:dev@jar")
+    api("com.github.GTNewHorizons:ThaumicTinkerer:2.12.22:dev@jar")
+    api("com.github.GTNewHorizons:CookingForBlockheads:1.4.12-GTNH:dev@jar")
+    api("com.github.GTNewHorizons:ThaumicEnergistics:1.7.51-GTNH:dev@jar")
+    api(rfg.deobf("curse.maven:chickenchunks-229316:2233250"))
+    api(rfg.deobf("curse.maven:automagy-222153:2285272"))
+    api(rfg.deobf("curse.maven:forbiddenmagic-224237:2303822"))
 }
